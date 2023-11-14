@@ -52,3 +52,13 @@ const highlightMenu = () => {
   
   menuLinks.addEventListener('click', hideMobileMenu);
   navLogo.addEventListener('click', hideMobileMenu);
+
+  // Add this to your existing JS file
+
+const experiencesMenu = document.querySelector('#experiences-page');
+
+window.addEventListener('scroll', highlightMenu);
+window.addEventListener('click', highlightMenu);
+
+
+

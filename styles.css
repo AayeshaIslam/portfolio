@@ -421,7 +421,7 @@ font-weight: 700;
 }
 /*Projects Section*/
 .projects {
-    background: #131313;
+    background: #000000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,7 +439,7 @@ font-weight: 700;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color:transparent;
     margin-bottom: 5rem;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 .projects__wrapper {
@@ -479,6 +479,18 @@ font-weight: 700;
 }
 .projects__card:nth-child(6) {
     background-image: linear-gradient(-225deg, #27e224 0%, #c20609 29%, #13b4ff 67%, #ddff00 100%);
+
+}
+.projects__card:nth-child(7) {
+    background-image: linear-gradient(-225deg, #27e224 0%, #c206af 29%, #13b4ff 67%, #ddff00 100%);
+
+}
+.projects__card:nth-child(8) {
+    background-image: linear-gradient(-225deg, #e28924 0%, #0f06c2 29%, #ff1313 67%, #00ff26 100%);
+
+}
+.projects__card:nth-child(9) {
+    background-image: linear-gradient(-225deg, #24b9e2 0%, #9dcd23 29%, #4c194e 67%, #00ff26 100%);
 
 }
 .projects__card h3 {
@@ -536,6 +548,63 @@ cursor: pointer;
     }
 }
 
+/*new code*/
+
+
+.experiences {
+    background: #131313;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .experiences h1 {
+    font-size: 4rem; /* Increased font size */
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #ffb199, #08ffff, #ff0844); /* Gradient color for h1 */
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .experiences__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  .experiences__card img:last-child {
+    margin-right: 0; /* No margin for the last image to prevent extra space */
+  }
+  .experiences__card h2 {
+    font-size: 2.5rem; /* Increased font size for job title */
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .experiences__card img {
+    width: calc(50% - 10px); /* Adjusted width for three images with some spacing */
+    border-radius: 8px;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+ 
+  .experiences__content {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .experience__description {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+/* new code */
  /* Footer CSS */
  .footer__container {
     background-color: #131313;
