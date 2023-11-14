@@ -14,6 +14,7 @@ const highlightMenu = () => {
     const homeMenu = document.querySelector('#home-page');
     const aboutMenu = document.querySelector('#about-page');
     const projectsMenu = document.querySelector('#projects-page');
+    const experiencesMenu = document.querySelector('#experiences-page');
     let scrollPos = window.scrollY;
     // console.log(scrollPos);
   
@@ -21,21 +22,30 @@ const highlightMenu = () => {
     if (window.innerWidth > 960 && scrollPos < 600) {
       homeMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
+      experiencesMenu.classList.remove('highlight');
       return;
     } else if (window.innerWidth > 960 && scrollPos < 1400) {
       aboutMenu.classList.add('highlight');
       homeMenu.classList.remove('highlight');
       projectsMenu.classList.remove('highlight');
+      experiencesMenu.classList.remove('highlight');
       return;
     } else if (window.innerWidth > 960 && scrollPos < 2345) {
       projectsMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
+      experiencesMenu.classList.remove('highlight');
       return;
     }
   
-    if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
-      elem.classList.remove('highlight');
-    }
+   // if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
+     // elem.classList.remove('highlight');
+    //}//new code
+    else if (window.innerWidth > 960 ) {
+      experiencesMenu.classList.add('highlight');
+      aboutMenu.classList.remove('highlight');
+      projectsMenu.classList.remove('highlight');
+      return;
+  }//new code
   };
   
   window.addEventListener('scroll', highlightMenu);
@@ -55,7 +65,7 @@ const highlightMenu = () => {
 
   // Add this to your existing JS file
 
-const experiencesMenu = document.querySelector('#experiences-page');
+
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);

@@ -53,6 +53,12 @@
 .navbar__item {
    height: 80px; 
 }
+/*adding new code*/
+.navbar__item:nth-child(4) {
+    margin-right: 20px; 
+    padding: 0.6rem;
+}
+/*adding new code */
 .navbar__links {
     color: #fff;
     display: flex;
