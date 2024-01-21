@@ -56,9 +56,13 @@
 /*adding new code*/
 .navbar__item:nth-child(4) {
     margin-right: 20px; 
-    padding: 0.6rem;
+    padding: 0.4rem;
 }
 /*adding new code */
+.navbar__item:nth-child(5) {
+    margin-right: 10px; 
+    
+}
 .navbar__links {
     color: #fff;
     display: flex;
@@ -127,7 +131,8 @@
      opacity: 1;
      transition: all 0.5s ease;
      z-index: 99;
-     height: 60vh;
+     /*height: 60vh;*/
+     height: auto;
      font-size: 1.6rem;
     
     }
@@ -165,10 +170,15 @@
     }
     #mobile-menu {
       position: absolute;
+      
       top: 20%;
       right: 5%;
       transform: translate(5%, 20%);
-
+/*
+    top: 80px; 
+    right: 5%;
+    transform: translate(5%, 0);
+    */
     }
     .navbar__toggle .bar {
         display: block;
@@ -454,6 +464,8 @@ font-weight: 700;
     grid-template-rows: 1fr;
 }
 .projects__card {
+    position: relative; /*experiment*/
+    overflow: hidden;
     margin: 10px;
     height: 425px;
     width: 300px;
@@ -508,20 +520,47 @@ font-weight: 700;
     margin-top: 2px;
     font-size: 17px;
 }
+/*
 .projects__btn {
     display: flex;
     justify-content: right;
    margin-right:5px;
     margin-top: 1px;
 }
-
-
+*/
+/*
 .projects__btn2 {
     display: flex;
     justify-content: left;
     margin-left:5px;
     margin-top: -29px;
 }
+
+.projects__btn3 {
+    display: flex;
+    justify-content: right;
+   margin-right:5px;
+    margin-top: 5px;
+}*/
+
+.projects__btn2,
+.projects__btn3 {
+    position: absolute;
+    bottom: 0px; 
+
+    opacity: 0; /* Initially hide buttons */
+    transition: opacity 0.3s ease-in;
+}
+
+.projects__btn2 {
+    left: 5px;
+}
+
+.projects__btn3 {
+    right: 5px;
+}
+
+
 .projects__card button {
     color: #fff;
     padding: 5px 5px;
@@ -540,7 +579,10 @@ transform: scale(1.075);
 transition: 0.3s ease-in;
 cursor: pointer;
 }
-
+.projects__card:hover .projects__btn2,
+.projects__card:hover .projects__btn3 {
+    opacity: 1; /* Show buttons on hover */
+}
 
 
 @media screen and (max-width: 1200px){
@@ -554,7 +596,7 @@ cursor: pointer;
     }
 }
 
-/*new code*/
+
 
 
 .experiences {
@@ -610,7 +652,98 @@ cursor: pointer;
     color: #fff;
     font-size: 1.2rem;
   }
+
+  /* Add this media query at the end of your CSS file */
+@media screen and (max-width: 768px) {
+    .experiences__card img {
+        width: 100%; /* Set image width to 100% for smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
 /* new code */
+
+
+  /* Research Section */
+  .research {
+    background: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+  }
+
+  .research h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff0844 0%, #fa99ff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    margin-bottom: 5rem;
+    font-size: 4rem;
+  }
+
+  .research__table {
+    width: 50%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-radius: 8px; /* Add border-radius for rounded edges */
+  overflow: hidden;
+  }
+  
+  .research__row {
+    cursor: pointer;
+    background-color: #3a8fb4;
+    background: -webkit-linear-gradient(to right,#cb45fc80,#1d25fd6f, #23a1c4cb);
+    background: linear-gradient(to right,#6a45fc,#1e12c5, #700b6b);
+    color: #fff;
+    font-size: 1.5rem;
+    padding-right: 1em;
+    
+  }
+  .research__row td {
+    padding-left: 1em; /* Add space after tab */
+    padding: 0.5em;
+    border-bottom: 2px solid #ddd;
+  }
+  .research__details {
+    display: none;
+    background-color: #3a8fb4;
+    background: -webkit-linear-gradient(to right,#23dadac5,#1193cab0, #3ab68fdc);
+    background: linear-gradient(to right,#47d2cbc8,#20a6f3d3, #182B3A);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  padding: 0.5em 0.5em 0;
+  }
+
+  .research__details p {
+    
+    margin-top: 0.5rem;
+    padding-left: 1em;
+    padding: 0.5em;
+  }
+/* Add this style at the end of your CSS file */
+.research__table a {
+    color: #cb15b9; /* Set the link color to white */
+    background-color: #ffffff; /* Set the background color to white */
+    padding: 2px 5px; /* Add some padding to the link */
+    border-radius: 4px; /* Add rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+  @media screen and (max-width: 768px) {
+    .research__table {
+        width: 70%; /* Set image width to 100% for smaller screens */
+        margin-bottom: 20px;
+    }
+}
+/*new code*/
+
  /* Footer CSS */
  .footer__container {
     background-color: #131313;

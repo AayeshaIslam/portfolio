@@ -1,6 +1,12 @@
 const menu = document.querySelector('#mobile-menu'); //hamburger menu
 const menuLinks = document.querySelector('.navbar__menu');
 
+// Add this function to your existing app.js file
+//this is for research section
+const toggleResearchDetails = (researchId) => {
+  const researchDetails = document.getElementById(researchId);
+  researchDetails.style.display = (researchDetails.style.display === 'table-row') ? 'none' : 'table-row';
+};
 // Display mobile menu
 const mobileMenu = () => {
     menu.classList.toggle('is-active');
@@ -15,6 +21,7 @@ const highlightMenu = () => {
     const aboutMenu = document.querySelector('#about-page');
     const projectsMenu = document.querySelector('#projects-page');
     const experiencesMenu = document.querySelector('#experiences-page');
+    const researchMenu = document.querySelector('#research-page');
     let scrollPos = window.scrollY;
     // console.log(scrollPos);
   
@@ -23,27 +30,37 @@ const highlightMenu = () => {
       homeMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
       experiencesMenu.classList.remove('highlight');
+      researchMenu.classList.remove('highlight');
       return;
     } else if (window.innerWidth > 960 && scrollPos < 1400) {
       aboutMenu.classList.add('highlight');
       homeMenu.classList.remove('highlight');
       projectsMenu.classList.remove('highlight');
       experiencesMenu.classList.remove('highlight');
+      researchMenu.classList.remove('highlight');
       return;
     } else if (window.innerWidth > 960 && scrollPos < 2345) {
       projectsMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
       experiencesMenu.classList.remove('highlight');
+      researchMenu.classList.remove('highlight');
       return;
     }
-  
+    else if (window.innerWidth > 960 && scrollPos<8000) {
+      experiencesMenu.classList.add('highlight');
+      aboutMenu.classList.remove('highlight');
+      projectsMenu.classList.remove('highlight');
+      researchMenu.classList.remove('highlight');
+      return;
+  }
    // if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
      // elem.classList.remove('highlight');
     //}//new code
     else if (window.innerWidth > 960 ) {
-      experiencesMenu.classList.add('highlight');
+      researchMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
       projectsMenu.classList.remove('highlight');
+      experiencesMenu.classList.remove('highlight');
       return;
   }//new code
   };
@@ -65,6 +82,7 @@ const highlightMenu = () => {
 
   // Add this to your existing JS file
 
+  
 
 
 window.addEventListener('scroll', highlightMenu);
